@@ -13,16 +13,21 @@
 
 <body>
   <header class="header">
-    <img id="imglogo" src="assets/images/icon.png" alt=""><img id="imglogo2" src="assets/images/logo2.jpeg" alt="">
-    <div class="header-right">
+    <img id="imglogo" src="assets/images/icon.png" alt="">
+    <img id="imglogo2" src="assets/images/logo2.jpeg" alt="">
+  
+    <!-- Botão hamburguer -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  
+    <div class="header-right" id="navMenu">
       <a class="active" href="#home">Home</a>
       <a href="#features">Funcionalidades</a>
       <a href="#about">Sobre</a>
       <a href="#pricing">Preço</a>
       <a href="#contact">Contato</a>
-
     </div>
   </header>
+  
   <main>
     <section id="home">
       <div id="texto-inicial" class="animate__animated animate__fadeInLeft">
@@ -245,108 +250,61 @@
         </div>
 
         <div class="pricing-grid">
-          <!-- Plano Gratuito -->
           <div class="pricing-card">
             <div class="pricing-card-header">
-              <h3>Ecoloop Mini</h3>
+              <h3><img src="assets/images/EcoMini.png" alt="" style="margin-left: 20PX;"></h3>
               <div class="price">R$ 199<span>/mês</span></div>
             </div>
             <ul class="pricing-features">
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Selo de Sustentabilidade no ranking</span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Cadastro de até 3 residuos </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Catalogo recomendado por tipo de industria </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> 10 matches a cada 15 dias </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Postagem ilimitadas em Desafios e soluções </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Guia legal inclusivo </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Painel de impacto financeiro </span>
-              </li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Selo Mini no perfil</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Cadastro de até 3 resíduos</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Catálogo completo</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> 10 matches a cada 15 dias</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Postagens ilimitadas em Desafios e Soluções</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Guia legal incluso</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Painel de impacto financeiro</span></li>
+              <li><span><i class="fas fa-times-circle" style="color: red;"></i> Com anúncios (reduzidos)</span></li>
             </ul>
+            
             <a href="#" class="btn-pricing">Começar agora</a>
           </div>
 
-          <!-- Plano Profissional (Destaque) -->
           <div class="pricing-card featured">
             <div class="pricing-card-header">
-              <h3>Ecoloop+</h3>
+              <h3><img src="assets/images/EcoPlus.png" alt="" style="margin-left: 50PX;"></h3>
               <div class="price">R$ 399<span>/mês</span></div>
             </div>
             <ul class="pricing-features">
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Selo Plus no ranking </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Catálogo por categoria: tipo,volume,proximidade, etc. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> 1 match por dia. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> 10 posts a cada 15 dias. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Painel de Impacto completo. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Acumulo e gestão de matches no perfil. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> I.A Integrada apenas no match inteligente. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Sem anuncios. </span>
-              </li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Selo Plus no ranking</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Cadastro de resíduos ilimitados</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Catálogo completo</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> 1 match por dia</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> 10 posts a cada 15 dias no Desafios e Soluções</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Painel de Impacto completo</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Acúmulo e gestão de matches no perfil</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> I.A Integrada apenas no Match inteligente</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Sem anúncios</span></li>
             </ul>
+            
             <a href="#" class="btn-pricing featured">Assinar agora</a>
           </div>
 
-          <!-- Plano Empresa -->
           <div class="pricing-card">
             <div class="pricing-card-header">
-              <h3>Ecoloop Pro</h3>
+              <h3><img src="assets/images/EcoPro.png" alt="" style="margin-left: 50PX;"></h3>
               <div class="price">R$ 649<span>/mês</span></div>
             </div>
             <ul class="pricing-features">
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Selo Pro no ranking. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Prioridade no catálogo e acesso exclusivo. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Matches e posts ilimitados. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Área Pro nos Desafios e Soluções. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Painel completo. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Acumulo de matches e soluções no perfil. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Acumulo de matches e soluções no perfil. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> I.A Integrada com Painel de Impacto e Match Inteligente. </span>
-              </li>
-              <li>
-                <span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> 100% livre de anúncios. </span>
-              </li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Selo Pro no ranking</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Matches e posts ilimitados</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Prioridade no catálogo e acesso exclusivo</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Área Pro nos Desafios e Soluções</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Painel completo (CO₂, lucro e API)</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Acúmulo de matches e soluções no perfil</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Acesso à IARA, nossa inteligência artificial</span></li>
+              <li><span><i class="fas fa-check-circle" style="color: var(--cor-primaria);"></i> Sem anúncios</span></li>
             </ul>
+            
             <a href="#" class="btn-pricing">Fale conosco</a>
           </div>
         </div>
@@ -389,15 +347,6 @@
           <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
           <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
         </ul>
-      </div>
-
-      <div class="footer-column">
-        <h3>Newsletter</h3>
-        <p>Assine para receber novidades sobre economia circular.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Seu e-mail" required>
-          <button type="submit"><i class="fas fa-paper-plane"></i></button>
-        </form>
       </div>
     </div>
 
